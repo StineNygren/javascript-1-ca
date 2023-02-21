@@ -1,6 +1,8 @@
 const container = document.querySelector(".container");
 let loader = document.querySelector(".loader img");
 
+document.title = "Pokedex";
+
 async function pokedex() {
   for (let i = 1; i <= 150; i++) {
     try {
@@ -17,23 +19,18 @@ async function pokedex() {
         image: result.sprites["front_default"],
         type: result.types.map((type) => type.type.name).join(", "),
       };
+      let firstType = pokemon.type.split(",")[0];
+
+      console.log(firstType);
       document.querySelector(".container").innerHTML += `
-      <a href="pages/details.html?id=${pokemon.id}" class="card">
-          <img class="card-image" src="${pokemon.image}"/>
+      <a href="pages/details.html?id=${pokemon.id}" class="card ">
+          <img class="card-image ${firstType}" src="${pokemon.image}"/>
           <h2 class="card-title">${pokemon.name}</h2>
-          <p class="card-subtitle">Type: ${pokemon.type}</p>
+          <p class="card-subtitle ">Type: ${pokemon.type}</p>
          
           
       </a>
   `;
-
-      //let typeName = result.types.name;
-
-      //typeCard = document.querySelector(".card");
-
-      //typeColor(pokemon.type);
-
-      console.log(pokemon.type);
     } catch (error) {
       console.log(error);
     }
@@ -41,12 +38,3 @@ async function pokedex() {
 }
 
 pokedex();
-/*
-let typeCard;
-
-function typeColor(type) {
-  if (type == "bug") {
-    typeCard.classList.add(".lilla");
-  }
-}
-*/

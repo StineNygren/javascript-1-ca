@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture</title>
+    <script defer src="../js/contact.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  <body>
+    <a class="link" href="../index.html">Back</a>
+    <main>
+      <div class="img-container">
+        <img class="logo-img" src="../img/pokedex.png" alt="Pokemon" />
+      </div>
+      <form>
+        <label for="name">Name (required)</label>
+        <input type="text" id="name" />
+        <div class="form-error" id="name-error">Please enter your name</div>
+        <label for="subject">Subject (minimum 10 characters)</label>
+        <input type="text" id="subject" />
+        <div class="form-error" id="subject-error">
+          Must be 10 characters long
+        </div>
+        <label for="email">Email (must include email address) </label>
+        <input type="text" id="email" />
+        <div class="form-error" id="email-error">must include email addres</div>
+        <label for="address">Address (minimum 25 characters)</label>
+        <input type="text" id="address" />
+        <div class="form-error" id="address-error">
+          Must be 25 characters long
+        </div>
+        <button>Submit</button>
+      </form>
+      <div class="display"></div>
+    </main>
+  </body>
+</html>

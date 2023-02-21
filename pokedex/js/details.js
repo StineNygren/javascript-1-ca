@@ -16,9 +16,13 @@ async function pokedex() {
       image: result.sprites["front_default"],
       type: result.types.map((type) => type.type.name).join(", "),
     };
+
+    let firstType = pokemon.type.split(",")[0];
+
+    document.title = pokemon.name;
     document.querySelector(".container").innerHTML += `
       <div class="card">
-          <img class="card-image" src="${pokemon.image}"/>
+          <img class="card-image ${firstType}" src="${pokemon.image}"/>
           <h2 class="card-title">${pokemon.name}</h2>
           <p class="card-subtitle">Type: ${pokemon.type}</p>
       </div>
