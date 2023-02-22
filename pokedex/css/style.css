@@ -11,9 +11,8 @@ body {
 
 .card {
   background-color: white;
-  width: 200px;
+  width: 70%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   border-radius: 10px;
   text-decoration: none;
@@ -25,7 +24,13 @@ body {
 .card-title,
 .card-subtitle {
   margin: 0 auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-size: clamp(1rem, 0.619rem + 1.9048vw, 3rem);
+}
+.card-subtitle {
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
 }
 
 .logo-img {
@@ -73,47 +78,45 @@ body {
   display: inline-block;
 }
 
+.card-image {
+  border-radius: 10px;
+}
+
 .grass {
-  background-image: linear-gradient(rgb(65, 200, 72), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(112, 197, 116), rgb(255, 255, 255));
 }
 
 .fire {
-  background-image: linear-gradient(rgb(255, 69, 69), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(219, 110, 110), rgb(255, 255, 255));
 }
 
 .water,
 .ice {
-  background-image: linear-gradient(rgb(100, 120, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(156, 165, 222), rgb(255, 255, 255));
 }
 
 .bug,
 .ghost,
 .poison {
-  background-image: linear-gradient(rgb(162, 80, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(167, 116, 226), rgb(255, 255, 255));
 }
 
-.normal {
-  background-image: linear-gradient(rgb(238, 252, 169), rgb(255, 255, 255));
+.normal,
+.fighting {
+  background-image: linear-gradient(rgb(228, 181, 105), rgb(255, 255, 255));
 }
 
 .electric,
 .psychic {
-  background-image: linear-gradient(rgb(255, 252, 66), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(245, 242, 89), rgb(255, 255, 255));
 }
 
 .ground,
 .rock {
-  background-image: linear-gradient(rgb(106, 74, 48), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(139, 104, 74), rgb(255, 255, 255));
 }
 
-.fairy {
-  background-image: linear-gradient(rgb(253, 164, 164), rgb(255, 255, 255));
-}
-
-.fighting {
-  background-image: linear-gradient(rgb(222, 168, 82), rgb(255, 255, 255));
-}
-
+.fairy,
 .dragon {
-  background-image: linear-gradient(rgb(235, 189, 115), rgb(255, 255, 255));
+  background-image: linear-gradient(rgb(255, 172, 172), rgb(255, 255, 255));
 }

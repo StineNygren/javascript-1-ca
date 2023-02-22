@@ -4,3 +4,8 @@
   margin: 10%;
   transform: scale(1.3);
 }
+
+.card {
+  width: 50%;
+  margin: 2rem;
+}

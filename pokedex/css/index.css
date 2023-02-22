@@ -1,12 +1,13 @@
-.card:hover {
-  color: rgb(5, 10, 13);
-  font-size: large;
-}
-
 .container {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+
   justify-items: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }

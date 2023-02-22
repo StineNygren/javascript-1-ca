@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
     };
     displayInput(inputs);
   } else {
-    displayError();
+    event.preventDefault();
   }
   event.preventDefault();
 });
@@ -41,35 +41,18 @@ function displayInput(inputs) {
     `;
 }
 
-function displayError() {
-  if (!nameValidation()) {
-    display.innerHTML += `
-    <h3>Name is required</h3>`;
-  }
-  if (!subjectValidation()) {
-    display.innerHTML += `
-    <h3>Subject must have 10 letters</h3>`;
-  }
-  if (!emailValidation()) {
-    display.innerHTML += `
-    <h3>Email must have emali address</h3>`;
-  }
-  if (!addressValidation()) {
-    display.innerHTML += `
-    <h3>Address must have 25 letters</h3>`;
-  }
-}
-
 function nameValidation() {
   if (!nameInput.value) {
     nameError.style.display = "block";
     return false;
   }
+  nameError.style.display = "none";
   return true;
 }
 
 function subjectValidation() {
   if (subject.value.length >= 10) {
+    subjectError.style.display = "none";
     return true;
   }
   subjectError.style.display = "block";
@@ -81,12 +64,14 @@ function emailValidation() {
     emailError.style.display = "block";
     return false;
   }
+  emailError.style.display = "none";
   const regEx = /@gmail.com|@hotmail.com/;
   return regEx.test(email.value);
 }
 
 function addressValidation() {
   if (address.value.length >= 25) {
+    addressError.style.display = "none";
     return true;
   }
   addressError.style.display = "block";

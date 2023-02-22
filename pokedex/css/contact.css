@@ -9,6 +9,11 @@ form {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 600px) {
+  form {
+    width: 40%;
+  }
+}
 
 .display {
   background-color: rgba(240, 255, 241, 0.5);

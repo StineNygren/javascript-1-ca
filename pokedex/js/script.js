@@ -4,12 +4,11 @@ let loader = document.querySelector(".loader img");
 document.title = "Pokedex";
 
 async function pokedex() {
-  for (let i = 1; i <= 150; i++) {
+  for (let i = 1; i <= 151; i++) {
     try {
       loader.classList.add("show");
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
       const result = await response.json();
-      console.log(result);
 
       loader.classList.remove("show");
 
@@ -21,7 +20,6 @@ async function pokedex() {
       };
       let firstType = pokemon.type.split(",")[0];
 
-      console.log(firstType);
       document.querySelector(".container").innerHTML += `
       <a href="pages/details.html?id=${pokemon.id}" class="card ">
           <img class="card-image ${firstType}" src="${pokemon.image}"/>
